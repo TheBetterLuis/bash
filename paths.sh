@@ -4,6 +4,8 @@
 
 #utils
 pyenv="/media/terakek/Coding/python/python-env/bin/activate"
+mic1="/home/betterluis/utils/monitorMic.out 1"
+mic0="/home/betterluis/utils/monitorMic.out 0"
 
 # path shortcuts
 repos="/media/terakek/repos"
@@ -16,6 +18,7 @@ cbeg="/media/terakek/Coding/GIT-VSC/C"
 cadv="/media/terakek/Coding/GIT-VSC/C/advanced"
 sql="/media/terakek/Coding/GIT-VSC/sql"
 flask="/media/terakek/Coding/python/flaskk"
+
 
 
 playwii="/media/terakek/PLAYWII"
