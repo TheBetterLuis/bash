@@ -18,7 +18,7 @@ cbeg="/media/terakek/Coding/GIT-VSC/C"
 cadv="/media/terakek/Coding/GIT-VSC/C/advanced"
 sql="/media/terakek/Coding/GIT-VSC/sql"
 flask="/media/terakek/Coding/python/flaskk"
-
+suckless="/home/betterluis/suckless"
 
 
 playwii="/media/terakek/PLAYWII"
@@ -29,6 +29,8 @@ lexpincode="/media/terakek/repos/18CPW"
 
 #xampp
 xampp="sudo /opt/lampp/manager-linux-x64.run"
+#telegram
+telegram="/media/terakek/repos/bash/telegram.sh"
 
 #sql
 sqltraining="mariadb -u betterluis -p training_db"
