@@ -19,6 +19,20 @@ kontinue=$(cat ~/cmus_info/continue.txt)
 [[ $shuffle == "tracks" ]] && shuffle="S" || shuffle=" "
 [[ $repeat == "true" ]] && repeat="R" || repeat=" "
 [[ $kontinue == "true" ]] && kontinue="C" || kontinue=" "
+
+if [[ $repeat_current == "ReCu" ]]; then 
+  repeat_icon=~/Pictures/icons/repeat-one-white-32.png 
+else 
+  repeat_icon=~/Pictures/icons/repeat-white-32.png 
+fi 
+
+if [[ $status == "playing" ]]; then 
+  status_icon=~/Pictures/icons/play-white-32.png 
+else 
+  status_icon=~/Pictures/icons/pause-white-32.png 
+fi 
+
+
 }
 
 parse_cmus_info
@@ -53,7 +67,7 @@ fi
 if [[ $1 -eq 3 ]]; then
   cmus-remote -u || cmus
   parse_cmus_info
-  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/play-pause-white-32.png
+  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $status_icon
 fi
 
 if [[ $1 -eq 4 ]]; then
@@ -78,13 +92,15 @@ fi
 
 if [[ $1 -eq 7 ]]; then
   parse_cmus_info
-  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/next-white-32.png
+  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $status_icon
 fi
+
+
 
 if [[ $1 -eq 8 ]]; then
   cmus-remote -C "toggle repeat_current"
   parse_cmus_info
-  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/next-white-32.png
+  notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $repeat_icon
 fi
 
 
