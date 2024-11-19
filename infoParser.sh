@@ -11,6 +11,10 @@ title=$(echo "$cmus_output" | grep 'tag title' | cut -d ' ' -f 3-)
 album=$(echo "$cmus_output" | grep 'tag album' | cut -d ' ' -f 3-)
 vol_left=$(echo "$cmus_output" | grep 'set vol_left' | awk '{print $3}')
 vol_right=$(echo "$cmus_output" | grep 'set vol_right' | awk '{print $3}')
+repeat_current=$(echo "$cmus_output" | grep 'set repeat_current' | awk '{print $3}') 
+shuffle=$(echo "$cmus_output" | grep 'set shuffle' | awk '{print $3}')
+repeat=$(echo "$cmus_output" | grep 'set repeat ' | awk '{print $3}')
+kontinue=$(echo "$cmus_output" | grep 'set continue' | awk '{print $3}')
 
 # Create directory if it doesn't exist
 mkdir -p ~/cmus_info
@@ -23,4 +27,7 @@ echo "$title" > ~/cmus_info/title.txt
 echo "$album" > ~/cmus_info/album.txt
 echo "$vol_left" > ~/cmus_info/vol_left.txt
 echo "$vol_right" > ~/cmus_info/vol_right.txt
-
+echo "$repeat_current" > ~/cmus_info/repeat_current.txt 
+echo "$shuffle" > ~/cmus_info/shuffle.txt 
+echo "$repeat" > ~/cmus_info/repeat.txt 
+echo "$kontinue" > ~/cmus_info/continue.txt
