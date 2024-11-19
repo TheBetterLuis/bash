@@ -12,4 +12,4 @@ fi
 
 echo $micValue > ~/mic_value.txt
 
-~/utils/monitorMic.out $micValue
+nohup ~/utils/monitorMic.out $micValue >/dev/null 2>&1 &

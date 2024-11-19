@@ -10,4 +10,3 @@ else
   nohup ~/Downloads/Telegram/Telegram >/dev/null 2>&1 &
 fi
 
-#nohup  ~/Downloads/Telegram/Telegram >/dev/null &
