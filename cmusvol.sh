@@ -65,7 +65,7 @@ fi
 #start/pause/unpause
 
 if [[ $1 -eq 3 ]]; then
-  cmus-remote -u || cmus
+  cmus-remote -u
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $status_icon
 fi
