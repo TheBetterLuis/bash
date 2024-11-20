@@ -43,20 +43,20 @@ parse_cmus_info
 #2 reset
 
 if [[ $1 -eq 2 ]]; then
-  cmus-remote -v  -100%
-  cmus-remote -v  +50%
+  nohup cmus-remote -v  -100% >/dev/null 2>&1 &
+  nohup cmus-remote -v  +50% >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -r 1111 -i ~/Pictures/icons/volume-restore-32.png
 fi
 
 if [[ $1 -eq 1 ]]; then
-  cmus-remote -v  +10%
+  nohup cmus-remote -v  +10% >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -r 1111 -i ~/Pictures/icons/volume-up-green-32.png
 fi
 
 if [[ $1 -eq 0 ]]; then
-  cmus-remote -v  -10%
+  nohup cmus-remote -v  -10% >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -r 1111 -i ~/Pictures/icons/volume-down-red-32.png
 fi
@@ -65,26 +65,26 @@ fi
 #start/pause/unpause
 
 if [[ $1 -eq 3 ]]; then
-  cmus-remote -u
+  nohup cmus-remote -u >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $status_icon
 fi
 
 if [[ $1 -eq 4 ]]; then
-  cmus-remote -r 
+  nohup cmus-remote -r >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/back-white-32.png
 fi
 
 
 if [[ $1 -eq 5 ]]; then
-  cmus-remote -n 
+  nohup cmus-remote -n >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/next-white-32.png
 fi
 
 if [[ $1 -eq 6 ]]; then
-  killall cmus
+  nohup killall cmus >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i ~/Pictures/icons/next-white-32.png
 fi
@@ -98,7 +98,7 @@ fi
 
 
 if [[ $1 -eq 8 ]]; then
-  cmus-remote -C "toggle repeat_current"
+  nohup cmus-remote -C "toggle repeat_current" >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -t 1500 -r 1111 -i $repeat_icon
 fi
