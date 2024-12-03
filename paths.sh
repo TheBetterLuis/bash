@@ -16,7 +16,7 @@ export EDITOR=nvim
 export VISUAL=nvim
  
 #utils
-pyenv="/media/terakek/Coding/python/python-env/bin/activate"
+pyenvs="/media/terakek/Coding/pyEnvs"
 mic1="/home/betterluis/utils/monitorMic.out 1"
 mic0="/home/betterluis/utils/monitorMic.out 0"
 
