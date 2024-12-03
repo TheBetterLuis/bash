@@ -12,8 +12,8 @@ PS1='[\u@\h \W]\$ '
 # Created by `pipx` on 2024-10-29 00:50:18
 export PATH="$PATH:/home/betterluis/.local/bin"
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
  
 #utils
 pyenvs="/media/terakek/Coding/pyEnvs"
