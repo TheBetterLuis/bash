@@ -42,4 +42,7 @@ telegram="/media/terakek/repos/bash/telegram.sh"
 #sql
 sqltraining="mariadb -u betterluis -p training_db"
 
+
+captureCard="ffplay -f v4l2 -input_format mjpeg -video_size 1280x720 -framerate 59.94 -i /dev/video0"
+
 export IMAGE_VIEWER="feh"
