@@ -6,10 +6,13 @@ micValueFile=~/mic_value.txt
 
 # Function to load the microphone loopback module
 load_mic_loopback() {
-  mic_loopback_index=$(pactl load-module module-loopback source=alsa_input.usb-hw:CARD=Filtered\ Microphone\ for\ USB\ PnP\ Audio\ Device\ Mono-fallback sink=monitor_sink)
+  mic_loopback_index=$(pactl load-module module-loopback source=easyeffects_source sink=monitor_sink)
   echo $mic_loopback_index > $micLoopbackFile
   notify-send "Mic (this doesn't mute mic)" "monitoring turned on" -r 9849 -i ~/Pictures/icons/mic-unmute-white-32.png
 }
+
+
+#easyeffects_source
 
 # Function to unload the microphone loopback module
 unload_mic_loopback() {
