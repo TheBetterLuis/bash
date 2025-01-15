@@ -8,6 +8,8 @@ if ! pgrep -x "easyeffects" > /dev/null; then
   xdotool type "easyeffects"
   sleep 0.1
   xdotool key Return
-  sleep 3.0
+  sleep 2.0
   xdotool key Alt+1 
+else
+  notify-send "easyeffects" "easyeffects is already runnning." -r 2222 -i ~/Pictures/icons/alert-white-32.png
 fi
