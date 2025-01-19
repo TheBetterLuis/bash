@@ -4,12 +4,19 @@
 captureCardLoopbackFile=~/capture_card_loopback_index.txt
 captureCardValueFile=~/captureCard_value.txt
 
+node_name=$(pactl list sources | grep "2109" | grep "node.name" | awk -F'"' '{print $2}')
+
 # Function to load the microphone loopback module
 load_capture_loopback() {
-  capture_card_index=$(pactl load-module module-loopback source=alsa_input.usb-MACROSILICON_2109-02.pro-input-0 sink=monitor_sink)
+  capture_card_index=$(pactl load-module module-loopback source="$node_name" sink=monitor_sink)
   echo $capture_card_index > $captureCardLoopbackFile
   notify-send "Capture Card" "monitoring ON" -r 9849 
 }
+
+#pactl list sources | grep "2109" | grep "node.name" | awk -F'"' '{print $2}'
+#pactl list sources | grep "2109"
+#alsa_input.usb-MACROSILICON_2109-02.analog-stereo
+#alsa_input.usb-MACROSILICON_2109-02.pro-input-0
 
 # Function to unload the microphone loopback module
 unload_capture_loopback() {
