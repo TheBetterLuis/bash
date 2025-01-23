@@ -16,9 +16,9 @@ repeat=$(cat ~/cmus_info/repeat.txt)
 kontinue=$(cat ~/cmus_info/continue.txt)
 
 [[ $repeat_current == "true" ]] && repeat_current="|ReCu" || repeat_current=""
-[[ $shuffle == "tracks" ]] && shuffle="S" || shuffle=" "
-[[ $repeat == "true" ]] && repeat="R" || repeat=" "
-[[ $kontinue == "true" ]] && kontinue="C" || kontinue=" "
+[[ $shuffle == "tracks" ]] && shuffle="S" || shuffle=""
+[[ $repeat == "true" ]] && repeat="R" || repeat=""
+[[ $kontinue == "true" ]] && kontinue="C" || kontinue=""
 
 if [[ $repeat_current == "ReCu" ]]; then 
   repeat_icon=~/Pictures/icons/repeat-one-white-32.png 
