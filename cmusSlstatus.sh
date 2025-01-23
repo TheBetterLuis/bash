@@ -15,7 +15,7 @@ shuffle=$(cat ~/cmus_info/shuffle.txt)
 repeat=$(cat ~/cmus_info/repeat.txt)
 kontinue=$(cat ~/cmus_info/continue.txt)
 
-[[ $repeat_current == "true" ]] && repeat_current="ReCu" || repeat_current=" "
+[[ $repeat_current == "true" ]] && repeat_current="|ReCu" || repeat_current=""
 [[ $shuffle == "tracks" ]] && shuffle="S" || shuffle=" "
 [[ $repeat == "true" ]] && repeat="R" || repeat=" "
 [[ $kontinue == "true" ]] && kontinue="C" || kontinue=" "
@@ -32,7 +32,7 @@ else
   status_icon=~/Pictures/icons/pause-white-32.png 
 fi 
 
-echo "$vol_left%|$title-$artist|$kontinue$repeat$shuffle|$status|$repeat_current"
+echo "$vol_left%|$title-$artist|$kontinue$repeat$shuffle|$status$repeat_current"
 }
 
 parse_cmus_info
