@@ -30,9 +30,16 @@ if [[ $status == "playing" ]]; then
   status_icon=~/Pictures/icons/play-white-32.png 
 else 
   status_icon=~/Pictures/icons/pause-white-32.png 
+
 fi 
 
-echo "$vol_left%|$title-$artist|$kontinue$repeat$shuffle|$status$repeat_current"
+if [[ $status == "" ]]; then 
+returnValue=" "
+else 
+returnValue="$vol_left% $title-$artist|$kontinue$repeat$shuffle|$status$repeat_current"
+fi 
+
+echo "$returnValue" 
 }
 
 parse_cmus_info
