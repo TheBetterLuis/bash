@@ -50,13 +50,13 @@ if [[ $1 -eq 2 ]]; then
 fi
 
 if [[ $1 -eq 1 ]]; then
-  nohup cmus-remote -v  +10% >/dev/null 2>&1 &
+  nohup cmus-remote -v  +1% >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -r 1111 -i ~/Pictures/icons/volume-up-green-32.png
 fi
 
 if [[ $1 -eq 0 ]]; then
-  nohup cmus-remote -v  -10% >/dev/null 2>&1 &
+  nohup cmus-remote -v  -1% >/dev/null 2>&1 &
   parse_cmus_info
   notify-send "cmus - volume=$vol_left%" "$status - $kontinue$repeat$shuffle $repeat_current\n$title - $artist " -r 1111 -i ~/Pictures/icons/volume-down-red-32.png
 fi
