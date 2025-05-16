@@ -42,6 +42,7 @@ telegram="/media/terakek/repos/bash/telegram.sh"
 #sql
 sqltraining="mariadb -u betterluis -p training_db"
 
+rivals2_mods="/media/terakek/SteamLibrary/steamapps/common/Rivals 2/Rivals2/Content/Paks/~mods"
 
 #captureCard="ffplay -f v4l2 -input_format mjpeg -video_size 1280x720 -framerate 59.94 -i /dev/video0"
 
