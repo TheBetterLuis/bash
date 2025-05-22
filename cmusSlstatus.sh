@@ -36,7 +36,7 @@ fi
 if [[ $status == "" ]]; then 
 returnValue=" "
 else 
-returnValue="$vol_left% $title-$artist|$kontinue$repeat$shuffle|$status$repeat_current"
+returnValue="$vol_left% ${title:0:20}|$kontinue$repeat$shuffle|${status:0:3}$repeat_current"
 fi 
 
 echo "$returnValue" 
