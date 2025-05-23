@@ -6,4 +6,4 @@ names="zekehere\niucio_\natwisely\nmoky_dokie\narjunebug\nsapphiregmd\nleffen\nn
 # Use dmenu to select a name
 selection=$(echo -e "$names" | dmenu -i -p "Select a name:")
 
-[ -n "$selection" ] && chatterino -c $selection 
+[ -n "$selection" ] && setsid -f mpv --speed=1 https://www.twitch.tv/$selection >/dev/null 2>&1
