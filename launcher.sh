@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of available scripts
-options="mpv-twitch\nonline-streamer-twitch\nchat-twitch\nutils\nedit-config"
+options="mpv-twitch\nonline-streamer-twitch\nchat-twitch\nutils\nedit-config\nyoutube-link"
 
 # Use dmenu to select a script
 selection=$(echo -e "$options" | dmenu -i -p "Select a script:")
@@ -18,6 +18,8 @@ case "$selection" in
     "utils") $path_bash/utils.sh ;;  
     #edit configs
     "edit-config") $path_bash/editConfig.sh ;;  
+    #youtube, paste link and will open in mpv
+    "youtube-link") $path_bash/youtubeLink.sh ;;  
 
 esac
 
