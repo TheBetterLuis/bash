@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of available scripts
-options="vim\nmpv-input\nmpv\nsxhkd\nxbindkeys\ndunst\nbash\nzsh\nnewsboat\ntmux\nxinitrc\nxbindkeys"
+options="vim\nmpv-input\nmpv conf\nsxhkd\nxbindkeys\ndunst\nbash\nzsh\nnewsboat\ntmux\nxinitrc\nxbindkeys"
 path="/media/terakek/repos/configs"
 # Use dmenu to select a script
 selection=$(echo -e "$options" | dmenu -i -p "Select a script:")
@@ -10,7 +10,7 @@ selection=$(echo -e "$options" | dmenu -i -p "Select a script:")
 case "$selection" in
     "vim") st -e vim $path/vim/.vimrc > /dev/null 2>&1 ;;  
     "mpv-input") st -e vim $path/mpv/input.conf > /dev/null 2>&1 ;;  
-    "mpv") st -e vim $path/mpv/mpv.conf > /dev/null 2>&1 ;;  
+    "mpv conf") st -e vim $path/mpv/mpv.conf > /dev/null 2>&1 ;;  
     "sxhkd") st -e vim $path/sxhkd/sxhkdrc > /dev/null 2>&1 ;;  
     "xbindkeys") st -e vim $path/xbindkeys/.xbindkeysrc > /dev/null 2>&1 ;;  
     "dunst") st -e vim $path/dunst/dunstrc > /dev/null 2>&1 ;;  

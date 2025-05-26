@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of available scripts
-options="filter\nxrandr\norange\nescape\nremove-filter"
+options="filter\nxrandr\norange\nescape\nremove-filter\neasy-ez-effects"
 
 # Use dmenu to select a script
 selection=$(echo -e "$options" | dmenu -i -p "Select a script:")
@@ -18,5 +18,9 @@ case "$selection" in
     "escape") setxkbmap -option caps:escape;;  
     #remove filter
     "remove-filter") redshift -x ;;  
+    #open easy effects
+    "easy-ez-effects") $path_bash/easyeffectsStart.sh ;;  
+
+
 esac
 
