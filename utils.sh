@@ -21,6 +21,5 @@ case "$selection" in
     #open easy effects
     "easy-ez-effects") $path_bash/easyeffectsStart.sh ;;  
 
-
 esac
 
