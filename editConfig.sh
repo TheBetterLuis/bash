@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of available scripts
-options="vim\nmpv-input\nmpv conf\nsxhkd\nxbindkeys\ndunst\nbash\nzsh\nnewsboat\ntmux\nxinitrc\nxbindkeys"
+options="vim\nmpv-input\nmpv conf\nsxhkd\nxbindkeys\ndunst\nbash\nzsh\nnewsboat\ntmux\nxinitrc\nxbindkeys\nneomutt"
 path="/media/terakek/repos/configs"
 # Use dmenu to select a script
 selection=$(echo -e "$options" | dmenu -i -p "Select a script:")
@@ -20,5 +20,6 @@ case "$selection" in
     "tmux") st -e vim $path/tmux/.tmux.conf > /dev/null 2>&1 ;;  
     "xinitrc") st -e vim $path/xinit/.xinitrc > /dev/null 2>&1 ;;  
     "xbindkeys") st -e vim $path/xinit/.xbindkeysrc > /dev/null 2>&1 ;;  
+    "neomutt") st -e vim $path/mutt/muttrc > /dev/null 2>&1 ;;  
 esac
 
